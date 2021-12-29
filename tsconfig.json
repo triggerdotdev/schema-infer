@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "module": "ES2020",
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "outDir": "./lib",
+    "declaration": true,
+    "allowJs": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
