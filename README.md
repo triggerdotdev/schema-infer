@@ -1,21 +1,25 @@
-# Typescript Node Package Repository Template
+# JSON Schema Infer
 
-> Create a new repo from this template to get started creating a Typescript npm package
+> Infers JSON Schemas and Type Definitions from example JSON
 
 <!-- ![Coverage lines](./badges/badge-lines.svg) -->
-<!-- ![Tests](https://github.com/jsonhero-io/ts-node-package-template/actions/workflows/test.yml/badge.svg?branch=main) -->
-<!-- [![Downloads](https://img.shields.io/npm/dm/%40jsonhero%2Fts-node-package-template.svg)](https://npmjs.com/@jsonhero/ts-node-package-template) -->
-<!-- [![Install size](https://packagephobia.com/badge?p=%40jsonhero%2Fts-node-package-template)](https://packagephobia.com/result?p=@jsonhero/ts-node-package-template) -->
+<!-- ![Tests](https://github.com/jsonhero-io/schema-infer/actions/workflows/test.yml/badge.svg?branch=main) -->
+<!-- [![Downloads](https://img.shields.io/npm/dm/%40jsonhero%2Fschema-infer.svg)](https://npmjs.com/@jsonhero/schema-infer) -->
+<!-- [![Install size](https://packagephobia.com/badge?p=%40jsonhero%2Fschema-infer)](https://packagephobia.com/result?p=@jsonhero/schema-infer) -->
 
 ## Features
 
 - Written in typescript
-- Github workflows for running tests and publishing package to NPM on Github release
-- ts-node and ts-jest integration
-- Generate coverage badges
-- ESLint with Typescript and prettier support
-- Pre-commit hooks to format code with prettier and run ESLint
+- Infers JSON Schema
+- Supports most string formats through [json-infer-types](https://github.com/jsonhero-io/json-infer-types)
+  - Date and times
+  - URIs
+  - Email Addresses
+  - Hostnames
+  - IP Addresses
+  - uuids
+- Infers JSON Type definitions
+- Supports hints for discriminators (tagged unions), value-only schemas, and enums
+- Provide with multiple JSON documents to improve inference
 
 ## Usage
-
-Create a new repository from this template on Github with the [following instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)

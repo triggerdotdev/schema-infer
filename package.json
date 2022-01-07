@@ -64,5 +64,9 @@
     "hooks": {
       "pre-commit": "npm run prettier-format && npm run lint"
     }
+  },
+  "dependencies": {
+    "@jsonhero/json-infer-types": "1.0.5",
+    "ts-pattern": "^3.3.4"
   }
 }
