@@ -1,25 +1,20 @@
-import { match, __ } from "ts-pattern";
+import { match } from "ts-pattern";
 import { s, Schema, SchemaBuilder, StringFormat } from "@jsonhero/json-schema-fns";
 import { InferredSchema } from "../inferredSchema";
 import { JSONStringFormat } from "@jsonhero/json-infer-types";
 
 export function toJSONSchema(inferredSchema: InferredSchema): SchemaBuilder<Schema> {
   return match<InferredSchema, SchemaBuilder<Schema>>(inferredSchema)
-    .with({ type: "unknown" }, () => s.$false())
+    .with({ type: "unknown" }, () => s.$false()) // This should never be reached
     .with({ type: "boolean" }, () => s.boolean())
-    .with({ type: "int" }, ({ inference }) => {
-      if (inference.minValue === inference.maxValue) {
-        return s.integer();
-      } else {
-        return s.integer({ minimum: inference.minValue, maximum: inference.maxValue });
-      }
+    .with({ type: "nullable" }, ({ schema }) =>
+      schema.type == "unknown" ? s.nil() : s.nullable(toJSONSchema(schema)),
+    )
+    .with({ type: "int" }, () => {
+      return s.integer();
     })
-    .with({ type: "float" }, ({ inference }) => {
-      if (inference.minValue === inference.maxValue) {
-        return s.number();
-      } else {
-        return s.number({ minimum: inference.minValue, maximum: inference.maxValue });
-      }
+    .with({ type: "float" }, () => {
+      return s.number();
     })
     .with({ type: "string" }, ({ format }) => {
       const formatString = toJSONStringFormat(format);
@@ -42,7 +37,10 @@ export function toJSONSchema(inferredSchema: InferredSchema): SchemaBuilder<Sche
 
       return s.object({ properties: requiredProperties.concat(optionalProperties) });
     })
-    .run();
+    .with({ type: "any" }, ({ schemas }) => {
+      return s.anyOf(...Array.from(schemas).map(toJSONSchema));
+    })
+    .exhaustive();
 }
 
 function toJSONStringFormat(format?: JSONStringFormat): StringFormat | undefined {

@@ -23,3 +23,7 @@
 - Provide with multiple JSON documents to improve inference
 
 ## Usage
+
+## Roadmap
+
+- Add "verbose" mode to include `$id`, `examples`, etc.

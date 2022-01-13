@@ -1,0 +1,28 @@
+{
+  "total_row_count": 2,
+  "timeframe": [
+    1607817600,
+    1607990400
+  ],
+  "page": 1,
+  "limit": 100,
+  "data": [
+    {
+      "live_stream_id": "B65hEUWW01ErVKDDGImKcBquYhwEAkjW6Ic3lPY0299Cc",
+      "delivered_seconds": 206.366667,
+      "deleted_at": "1607945257",
+      "created_at": "1607939184",
+      "asset_state": "deleted",
+      "asset_id": "Ww4v2q2H4MNbHIAM2wApKb3cmrh7eHjGLUjdKohR5wM",
+      "asset_duration": 154.366667
+    },
+    {
+      "delivered_seconds": 30,
+      "deleted_at": "1607935288",
+      "created_at": "1607617107",
+      "asset_state": "deleted",
+      "asset_id": "Qlb007on1TwN43XLIG027QJlUxm3jd01v5PRi1aXhnyFZY",
+      "asset_duration": 98.773667
+    }
+  ]
+}

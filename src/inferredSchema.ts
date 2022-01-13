@@ -1,33 +1,9 @@
 import { JSONStringFormat } from "@jsonhero/json-infer-types";
 
-export class IntInference {
-  minValue: number;
-  maxValue: number;
-
-  // This may seem counter-intuitive, but we have to start the minValue at the highest integer and the maxValue at the lowest integer
-  constructor(minValue = Number.MAX_SAFE_INTEGER, maxValue = Number.MIN_SAFE_INTEGER) {
-    this.minValue = minValue;
-    this.maxValue = maxValue;
-  }
-
-  infer(value: number): IntInference {
-    return new IntInference(Math.min(this.minValue, value), Math.max(this.maxValue, value));
-  }
-}
-
-export class FloatInference {
-  minValue: number;
-  maxValue: number;
-
-  constructor(minValue = Number.MAX_SAFE_INTEGER, maxValue = Number.MIN_SAFE_INTEGER) {
-    this.minValue = minValue;
-    this.maxValue = maxValue;
-  }
-
-  infer(value: number): IntInference {
-    return new IntInference(Math.min(this.minValue, value), Math.max(this.maxValue, value));
-  }
-}
+type NumberRange = {
+  min: number;
+  max: number;
+};
 
 type InferredUnknown = {
   type: "unknown";
@@ -44,22 +20,17 @@ type InferredBoolean = {
 
 type InferredInt = {
   type: "int";
-  inference: IntInference;
+  range: NumberRange;
 };
 
 type InferredFloat = {
   type: "float";
-  inference: FloatInference;
+  range: NumberRange;
 };
 
 type InferredString = {
   type: "string";
   format?: JSONStringFormat;
-};
-
-type InferredEnum = {
-  type: "enum";
-  values: Set<string>;
 };
 
 type InferredArray = {
@@ -75,17 +46,6 @@ type InferredObject = {
   };
 };
 
-type InferredValues = {
-  type: "values";
-  schema: InferredSchema;
-};
-
-type InferredDiscrimator = {
-  type: "discrimator";
-  discrimator: string;
-  mapping: Record<string, InferredSchema>;
-};
-
 type InferredNullable = {
   type: "nullable";
   schema: InferredSchema;
@@ -98,9 +58,16 @@ export type InferredSchema =
   | InferredInt
   | InferredFloat
   | InferredString
-  | InferredEnum
   | InferredArray
   | InferredObject
-  | InferredValues
-  | InferredDiscrimator
   | InferredNullable;
+
+export function inferRange(
+  value: number,
+  range: NumberRange = { min: Number.MAX_SAFE_INTEGER, max: Number.MIN_SAFE_INTEGER },
+): NumberRange {
+  return {
+    min: Math.min(range.min, value),
+    max: Math.max(range.max, value),
+  };
+}

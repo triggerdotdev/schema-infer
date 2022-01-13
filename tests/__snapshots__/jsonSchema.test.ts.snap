@@ -1,0 +1,1037 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`real world tests infers the airtable schema correctly 1`] = `
+Object {
+  "properties": Object {
+    "offset": Object {
+      "type": "string",
+    },
+    "records": Object {
+      "items": Object {
+        "properties": Object {
+          "createdTime": Object {
+            "format": "date-time",
+            "type": "string",
+          },
+          "fields": Object {
+            "properties": Object {
+              "Description": Object {
+                "type": "string",
+              },
+              "Face Images": Object {
+                "items": Object {
+                  "properties": Object {
+                    "filename": Object {
+                      "type": "string",
+                    },
+                    "height": Object {
+                      "type": "integer",
+                    },
+                    "id": Object {
+                      "type": "string",
+                    },
+                    "size": Object {
+                      "type": "integer",
+                    },
+                    "thumbnails": Object {
+                      "properties": Object {
+                        "full": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                        "large": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                        "small": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                      },
+                      "required": Array [
+                        "small",
+                        "large",
+                        "full",
+                      ],
+                      "type": "object",
+                    },
+                    "type": Object {
+                      "type": "string",
+                    },
+                    "url": Object {
+                      "format": "uri",
+                      "type": "string",
+                    },
+                    "width": Object {
+                      "type": "integer",
+                    },
+                  },
+                  "required": Array [
+                    "id",
+                    "width",
+                    "height",
+                    "url",
+                    "filename",
+                    "size",
+                    "type",
+                    "thumbnails",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "Faces": Object {
+                "items": Object {
+                  "type": "string",
+                },
+                "type": "array",
+              },
+              "ID": Object {
+                "type": "integer",
+              },
+              "Image": Object {
+                "items": Object {
+                  "properties": Object {
+                    "filename": Object {
+                      "type": "string",
+                    },
+                    "height": Object {
+                      "type": "integer",
+                    },
+                    "id": Object {
+                      "type": "string",
+                    },
+                    "size": Object {
+                      "type": "integer",
+                    },
+                    "thumbnails": Object {
+                      "properties": Object {
+                        "full": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                        "large": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                        "small": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                      },
+                      "required": Array [
+                        "small",
+                        "large",
+                        "full",
+                      ],
+                      "type": "object",
+                    },
+                    "type": Object {
+                      "type": "string",
+                    },
+                    "url": Object {
+                      "format": "uri",
+                      "type": "string",
+                    },
+                    "width": Object {
+                      "type": "integer",
+                    },
+                  },
+                  "required": Array [
+                    "id",
+                    "width",
+                    "height",
+                    "url",
+                    "filename",
+                    "size",
+                    "type",
+                    "thumbnails",
+                  ],
+                  "type": "object",
+                },
+                "type": "array",
+              },
+              "Notes": Object {
+                "type": "string",
+              },
+              "People": Object {
+                "items": Object {
+                  "type": "string",
+                },
+                "type": "array",
+              },
+              "Status": Object {
+                "type": "string",
+              },
+              "Tags": Object {
+                "items": Object {
+                  "type": "string",
+                },
+                "type": "array",
+              },
+            },
+            "required": Array [
+              "Tags",
+              "ID",
+              "Description",
+              "Faces",
+              "Image",
+              "Status",
+              "Notes",
+              "People",
+              "Face Images",
+            ],
+            "type": "object",
+          },
+          "id": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "id",
+          "fields",
+          "createdTime",
+        ],
+        "type": "object",
+      },
+      "type": "array",
+    },
+  },
+  "required": Array [
+    "records",
+    "offset",
+  ],
+  "type": "object",
+}
+`;
+
+exports[`real world tests infers the mux-list-delivery-usage schema correctly 1`] = `
+Object {
+  "properties": Object {
+    "data": Object {
+      "items": Object {
+        "properties": Object {
+          "asset_duration": Object {
+            "type": "number",
+          },
+          "asset_id": Object {
+            "type": "string",
+          },
+          "asset_state": Object {
+            "type": "string",
+          },
+          "created_at": Object {
+            "type": "string",
+          },
+          "deleted_at": Object {
+            "type": "string",
+          },
+          "delivered_seconds": Object {
+            "type": "number",
+          },
+          "live_stream_id": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "delivered_seconds",
+          "deleted_at",
+          "created_at",
+          "asset_state",
+          "asset_id",
+          "asset_duration",
+        ],
+        "type": "object",
+      },
+      "type": "array",
+    },
+    "limit": Object {
+      "type": "integer",
+    },
+    "page": Object {
+      "type": "integer",
+    },
+    "timeframe": Object {
+      "items": Object {
+        "type": "integer",
+      },
+      "type": "array",
+    },
+    "total_row_count": Object {
+      "type": "integer",
+    },
+  },
+  "required": Array [
+    "total_row_count",
+    "timeframe",
+    "page",
+    "limit",
+    "data",
+  ],
+  "type": "object",
+}
+`;
+
+exports[`real world tests infers the tweets schema correctly 1`] = `
+Object {
+  "items": Object {
+    "properties": Object {
+      "data": Object {
+        "items": Object {
+          "properties": Object {
+            "author_id": Object {
+              "type": "string",
+            },
+            "context_annotations": Object {
+              "items": Object {
+                "properties": Object {
+                  "domain": Object {
+                    "properties": Object {
+                      "description": Object {
+                        "type": "string",
+                      },
+                      "id": Object {
+                        "type": "string",
+                      },
+                      "name": Object {
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "id",
+                      "name",
+                      "description",
+                    ],
+                    "type": "object",
+                  },
+                  "entity": Object {
+                    "properties": Object {
+                      "id": Object {
+                        "type": "string",
+                      },
+                      "name": Object {
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "id",
+                      "name",
+                    ],
+                    "type": "object",
+                  },
+                },
+                "required": Array [
+                  "domain",
+                  "entity",
+                ],
+                "type": "object",
+              },
+              "type": "array",
+            },
+            "conversation_id": Object {
+              "type": "string",
+            },
+            "created_at": Object {
+              "format": "date-time",
+              "type": "string",
+            },
+            "entities": Object {
+              "properties": Object {
+                "annotations": Object {
+                  "items": Object {
+                    "properties": Object {
+                      "end": Object {
+                        "type": "integer",
+                      },
+                      "normalized_text": Object {
+                        "type": "string",
+                      },
+                      "probability": Object {
+                        "type": "number",
+                      },
+                      "start": Object {
+                        "type": "integer",
+                      },
+                      "type": Object {
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "start",
+                      "end",
+                      "probability",
+                      "type",
+                      "normalized_text",
+                    ],
+                    "type": "object",
+                  },
+                  "type": "array",
+                },
+                "mentions": Object {
+                  "items": Object {
+                    "properties": Object {
+                      "end": Object {
+                        "type": "integer",
+                      },
+                      "start": Object {
+                        "type": "integer",
+                      },
+                      "username": Object {
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "start",
+                      "end",
+                      "username",
+                    ],
+                    "type": "object",
+                  },
+                  "type": "array",
+                },
+                "urls": Object {
+                  "items": Object {
+                    "properties": Object {
+                      "description": Object {
+                        "type": "string",
+                      },
+                      "display_url": Object {
+                        "type": "string",
+                      },
+                      "end": Object {
+                        "type": "integer",
+                      },
+                      "expanded_url": Object {
+                        "format": "uri",
+                        "type": "string",
+                      },
+                      "images": Object {
+                        "items": Object {
+                          "properties": Object {
+                            "height": Object {
+                              "type": "integer",
+                            },
+                            "url": Object {
+                              "format": "uri",
+                              "type": "string",
+                            },
+                            "width": Object {
+                              "type": "integer",
+                            },
+                          },
+                          "required": Array [
+                            "url",
+                            "width",
+                            "height",
+                          ],
+                          "type": "object",
+                        },
+                        "type": "array",
+                      },
+                      "start": Object {
+                        "type": "integer",
+                      },
+                      "status": Object {
+                        "type": "integer",
+                      },
+                      "title": Object {
+                        "type": "string",
+                      },
+                      "unwound_url": Object {
+                        "format": "uri",
+                        "type": "string",
+                      },
+                      "url": Object {
+                        "format": "uri",
+                        "type": "string",
+                      },
+                    },
+                    "required": Array [
+                      "start",
+                      "end",
+                      "url",
+                      "expanded_url",
+                      "display_url",
+                      "status",
+                      "title",
+                      "description",
+                      "unwound_url",
+                    ],
+                    "type": "object",
+                  },
+                  "type": "array",
+                },
+              },
+              "required": Array [
+                "urls",
+              ],
+              "type": "object",
+            },
+            "id": Object {
+              "type": "string",
+            },
+            "in_reply_to_user_id": Object {
+              "type": "string",
+            },
+            "lang": Object {
+              "type": "string",
+            },
+            "possibly_sensitive": Object {
+              "type": "boolean",
+            },
+            "public_metrics": Object {
+              "properties": Object {
+                "like_count": Object {
+                  "type": "integer",
+                },
+                "quote_count": Object {
+                  "type": "integer",
+                },
+                "reply_count": Object {
+                  "type": "integer",
+                },
+                "retweet_count": Object {
+                  "type": "integer",
+                },
+              },
+              "required": Array [
+                "retweet_count",
+                "reply_count",
+                "like_count",
+                "quote_count",
+              ],
+              "type": "object",
+            },
+            "referenced_tweets": Object {
+              "items": Object {
+                "properties": Object {
+                  "id": Object {
+                    "type": "string",
+                  },
+                  "type": Object {
+                    "type": "string",
+                  },
+                },
+                "required": Array [
+                  "type",
+                  "id",
+                ],
+                "type": "object",
+              },
+              "type": "array",
+            },
+            "source": Object {
+              "type": "string",
+            },
+            "text": Object {
+              "type": "string",
+            },
+          },
+          "required": Array [
+            "conversation_id",
+            "id",
+            "possibly_sensitive",
+            "public_metrics",
+            "entities",
+            "text",
+            "in_reply_to_user_id",
+            "created_at",
+            "author_id",
+            "referenced_tweets",
+            "lang",
+            "source",
+          ],
+          "type": "object",
+        },
+        "type": "array",
+      },
+      "includes": Object {
+        "properties": Object {
+          "tweets": Object {
+            "items": Object {
+              "properties": Object {
+                "attachments": Object {
+                  "properties": Object {
+                    "media_keys": Object {
+                      "items": Object {
+                        "type": "string",
+                      },
+                      "type": "array",
+                    },
+                  },
+                  "required": Array [
+                    "media_keys",
+                  ],
+                  "type": "object",
+                },
+                "author_id": Object {
+                  "type": "string",
+                },
+                "conversation_id": Object {
+                  "type": "string",
+                },
+                "created_at": Object {
+                  "format": "date-time",
+                  "type": "string",
+                },
+                "entities": Object {
+                  "properties": Object {
+                    "annotations": Object {
+                      "items": Object {
+                        "properties": Object {
+                          "end": Object {
+                            "type": "integer",
+                          },
+                          "normalized_text": Object {
+                            "type": "string",
+                          },
+                          "probability": Object {
+                            "type": "number",
+                          },
+                          "start": Object {
+                            "type": "integer",
+                          },
+                          "type": Object {
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "start",
+                          "end",
+                          "probability",
+                          "type",
+                          "normalized_text",
+                        ],
+                        "type": "object",
+                      },
+                      "type": "array",
+                    },
+                    "hashtags": Object {
+                      "items": Object {
+                        "properties": Object {
+                          "end": Object {
+                            "type": "integer",
+                          },
+                          "start": Object {
+                            "type": "integer",
+                          },
+                          "tag": Object {
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "start",
+                          "end",
+                          "tag",
+                        ],
+                        "type": "object",
+                      },
+                      "type": "array",
+                    },
+                    "mentions": Object {
+                      "items": Object {
+                        "properties": Object {
+                          "end": Object {
+                            "type": "integer",
+                          },
+                          "start": Object {
+                            "type": "integer",
+                          },
+                          "username": Object {
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "start",
+                          "end",
+                          "username",
+                        ],
+                        "type": "object",
+                      },
+                      "type": "array",
+                    },
+                    "urls": Object {
+                      "items": Object {
+                        "properties": Object {
+                          "display_url": Object {
+                            "type": "string",
+                          },
+                          "end": Object {
+                            "type": "integer",
+                          },
+                          "expanded_url": Object {
+                            "format": "uri",
+                            "type": "string",
+                          },
+                          "start": Object {
+                            "type": "integer",
+                          },
+                          "url": Object {
+                            "format": "uri",
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "start",
+                          "end",
+                          "url",
+                          "expanded_url",
+                          "display_url",
+                        ],
+                        "type": "object",
+                      },
+                      "type": "array",
+                    },
+                  },
+                  "required": Array [
+                    "mentions",
+                  ],
+                  "type": "object",
+                },
+                "id": Object {
+                  "type": "string",
+                },
+                "lang": Object {
+                  "type": "string",
+                },
+                "possibly_sensitive": Object {
+                  "type": "boolean",
+                },
+                "public_metrics": Object {
+                  "properties": Object {
+                    "like_count": Object {
+                      "type": "integer",
+                    },
+                    "quote_count": Object {
+                      "type": "integer",
+                    },
+                    "reply_count": Object {
+                      "type": "integer",
+                    },
+                    "retweet_count": Object {
+                      "type": "integer",
+                    },
+                  },
+                  "required": Array [
+                    "retweet_count",
+                    "reply_count",
+                    "like_count",
+                    "quote_count",
+                  ],
+                  "type": "object",
+                },
+                "source": Object {
+                  "type": "string",
+                },
+                "text": Object {
+                  "type": "string",
+                },
+              },
+              "required": Array [
+                "conversation_id",
+                "id",
+                "possibly_sensitive",
+                "public_metrics",
+                "entities",
+                "text",
+                "created_at",
+                "author_id",
+                "lang",
+                "source",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+          "users": Object {
+            "items": Object {
+              "properties": Object {
+                "created_at": Object {
+                  "format": "date-time",
+                  "type": "string",
+                },
+                "description": Object {
+                  "type": "string",
+                },
+                "entities": Object {
+                  "properties": Object {
+                    "description": Object {
+                      "properties": Object {
+                        "hashtags": Object {
+                          "items": Object {
+                            "properties": Object {
+                              "end": Object {
+                                "type": "integer",
+                              },
+                              "start": Object {
+                                "type": "integer",
+                              },
+                              "tag": Object {
+                                "type": "string",
+                              },
+                            },
+                            "required": Array [
+                              "start",
+                              "end",
+                              "tag",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                        "mentions": Object {
+                          "items": Object {
+                            "properties": Object {
+                              "end": Object {
+                                "type": "integer",
+                              },
+                              "start": Object {
+                                "type": "integer",
+                              },
+                              "username": Object {
+                                "type": "string",
+                              },
+                            },
+                            "required": Array [
+                              "start",
+                              "end",
+                              "username",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                      },
+                      "type": "object",
+                    },
+                    "url": Object {
+                      "properties": Object {
+                        "urls": Object {
+                          "items": Object {
+                            "properties": Object {
+                              "display_url": Object {
+                                "type": "string",
+                              },
+                              "end": Object {
+                                "type": "integer",
+                              },
+                              "expanded_url": Object {
+                                "format": "uri",
+                                "type": "string",
+                              },
+                              "start": Object {
+                                "type": "integer",
+                              },
+                              "url": Object {
+                                "format": "uri",
+                                "type": "string",
+                              },
+                            },
+                            "required": Array [
+                              "start",
+                              "end",
+                              "url",
+                              "expanded_url",
+                              "display_url",
+                            ],
+                            "type": "object",
+                          },
+                          "type": "array",
+                        },
+                      },
+                      "required": Array [
+                        "urls",
+                      ],
+                      "type": "object",
+                    },
+                  },
+                  "required": Array [
+                    "url",
+                    "description",
+                  ],
+                  "type": "object",
+                },
+                "id": Object {
+                  "type": "string",
+                },
+                "location": Object {
+                  "type": "string",
+                },
+                "name": Object {
+                  "type": "string",
+                },
+                "pinned_tweet_id": Object {
+                  "type": "string",
+                },
+                "profile_image_url": Object {
+                  "format": "uri",
+                  "type": "string",
+                },
+                "protected": Object {
+                  "type": "boolean",
+                },
+                "public_metrics": Object {
+                  "properties": Object {
+                    "followers_count": Object {
+                      "type": "integer",
+                    },
+                    "following_count": Object {
+                      "type": "integer",
+                    },
+                    "listed_count": Object {
+                      "type": "integer",
+                    },
+                    "tweet_count": Object {
+                      "type": "integer",
+                    },
+                  },
+                  "required": Array [
+                    "followers_count",
+                    "following_count",
+                    "tweet_count",
+                    "listed_count",
+                  ],
+                  "type": "object",
+                },
+                "url": Object {
+                  "format": "uri",
+                  "type": "string",
+                },
+                "username": Object {
+                  "type": "string",
+                },
+                "verified": Object {
+                  "type": "boolean",
+                },
+              },
+              "required": Array [
+                "created_at",
+                "profile_image_url",
+                "entities",
+                "id",
+                "verified",
+                "location",
+                "description",
+                "username",
+                "public_metrics",
+                "name",
+                "url",
+                "protected",
+              ],
+              "type": "object",
+            },
+            "type": "array",
+          },
+        },
+        "required": Array [
+          "users",
+          "tweets",
+        ],
+        "type": "object",
+      },
+    },
+    "required": Array [
+      "data",
+      "includes",
+    ],
+    "type": "object",
+  },
+  "type": "array",
+}
+`;
