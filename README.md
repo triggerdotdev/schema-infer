@@ -10,7 +10,8 @@
 ## Features
 
 - Written in typescript
-- Infers JSON Schema
+- Inspired by [jtd-infer](https://jsontypedef.com/docs/jtd-infer/)
+- Generate JSON schema documents from example data
 - Supports most string formats through [json-infer-types](https://github.com/jsonhero-io/json-infer-types)
   - Date and times
   - URIs
@@ -18,12 +19,44 @@
   - Hostnames
   - IP Addresses
   - uuids
-- Infers JSON Type definitions
-- Supports hints for discriminators (tagged unions), value-only schemas, and enums
-- Provide with multiple JSON documents to improve inference
+- Available as a CLI and a library
+- Supports snapshotting and restoring inference sessions
 
 ## Usage
 
+```ts
+import { inferSchema } from "@jsonhero/schema-infer";
+
+inferSchema({
+  id: "abeb8b52-e960-44dc-9e09-57bb00d6b441",
+  name: "Eric",
+  emailAddress: "eric@example.com",
+  website: "https://github.com/ericallam",
+  joined: "2022-01-01",
+})toJSONSchema();
+```
+
+Infers the following JSON schema:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "name": { "type": "string" },
+    "emailAddress": { "type": "string", "format": "email" },
+    "website": { "type": "string", "format": "uri" },
+    "joined": { "type": "string", "format": "date" }
+  },
+  "required": ["id", "name", "emailAddress", "website", "joined"]
+}
+```
+
+## Examples
+
 ## Roadmap
 
+- Add support for hints for discriminators (tagged unions), value-only schemas, and enums
+- Add support for [JSON Typedefs](https://jsontypedef.com)
 - Add "verbose" mode to include `$id`, `examples`, etc.

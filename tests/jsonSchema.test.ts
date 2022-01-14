@@ -3,8 +3,10 @@ import { readFileSync } from "fs";
 import { inferSchema, restoreSnapshot, SchemaInferrer } from "../src";
 
 const toSchema = (s: SchemaInferrer): Schema => s.toJSONSchema({ includeSchema: false });
+const readFixture = (s: string): unknown =>
+  JSON.parse(readFileSync(`./tests/json/${s}.json`, "utf8").toString());
 const fixtureToSchema = (s: string): Schema =>
-  inferSchema(JSON.parse(readFileSync(`./tests/json/${s}.json`, "utf8").toString())).toJSONSchema({
+  inferSchema(readFixture(s)).toJSONSchema({
     includeSchema: false,
   });
 
@@ -350,5 +352,20 @@ describe("real world tests", () => {
 
   test("infers the tweets schema correctly", () => {
     expect(fixtureToSchema("tweets")).toMatchSnapshot();
+  });
+});
+
+import Ajv2020 from "ajv/dist/2020";
+import addFormats from "ajv-formats";
+const ajv = new Ajv2020();
+addFormats(ajv);
+
+describe("validation", () => {
+  it("should pass validation if given the same json the schema was inferred from", () => {
+    const schema = fixtureToSchema("tweets");
+    const validate = ajv.compile(schema);
+    const tweetsJson = readFixture("tweets");
+
+    expect(validate(tweetsJson)).toBe(true);
   });
 });
