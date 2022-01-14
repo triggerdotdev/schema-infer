@@ -1,14 +1,14 @@
 {
-  "name": "@jsonhero/ts-node-package-template",
+  "name": "@jsonhero/schema-infer",
   "version": "0.0.1",
-  "description": "A template for creating a new TypeScript package",
-  "homepage": "https://github.com/jsonhero-io/ts-node-package-template",
+  "description": "Infers JSON Schemas from example JSON",
+  "homepage": "https://github.com/jsonhero-io/schema-infer",
   "bugs": {
-    "url": "https://github.com/jsonhero-io/ts-node-package-template/issues"
+    "url": "https://github.com/jsonhero-io/schema-infer/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsonhero-io/ts-node-package-template.git"
+    "url": "https://github.com/jsonhero-io/schema-infer.git"
   },
   "exports": "./lib/index.js",
   "types": "lib/index.d.ts",
@@ -32,8 +32,12 @@
   "engines": {
     "node": "16"
   },
-  "keywords": [],
-  "author": "Author Name",
+  "keywords": [
+    "json",
+    "schema",
+    "json-schema"
+  ],
+  "author": "Eric Allam",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
@@ -72,6 +76,7 @@
   },
   "dependencies": {
     "@jsonhero/json-infer-types": "1.0.9",
+    "@jsonhero/json-schema-fns": "^0.0.1",
     "ts-pattern": "^3.3.4"
   },
   "bin": {
