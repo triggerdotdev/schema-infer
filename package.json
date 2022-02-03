@@ -1,6 +1,6 @@
 {
   "name": "@jsonhero/schema-infer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Infers JSON Schemas from example JSON",
   "homepage": "https://github.com/jsonhero-io/schema-infer",
   "bugs": {
