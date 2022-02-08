@@ -3,7 +3,7 @@ import { inferType, JSONValueType } from "@jsonhero/json-infer-types";
 import { InferredSchema, inferRange } from "./inferredSchema";
 import { Schema } from "@jsonhero/json-schema-fns";
 import { toJSONSchema } from "./jsonSchema";
-import { omit } from "lodash";
+import omit from "lodash.omit";
 
 function convertToAnySchema(schema: InferredSchema, value: unknown) {
   const schemas = new Set<InferredSchema>([schema]);
