@@ -8,7 +8,11 @@ export function toJSONSchema(inferredSchema: InferredSchema): SchemaBuilder<Sche
     .with({ type: "unknown" }, () => s.$false()) // This should never be reached
     .with({ type: "boolean" }, () => s.boolean())
     .with({ type: "nullable" }, ({ schema }) =>
-      schema.type == "unknown" ? s.nil() : s.nullable(toJSONSchema(schema)),
+      schema.type == "unknown"
+        ? s.nil()
+        : schema.type === "nullable"
+        ? toJSONSchema(schema)
+        : s.nullable(toJSONSchema(schema)),
     )
     .with({ type: "int" }, () => {
       return s.integer();

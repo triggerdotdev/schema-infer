@@ -339,6 +339,17 @@ describe("nullables", () => {
       },
     });
   });
+
+  test("infers just a single null type if multiple nulls are found", () => {
+    const schema = inferSchema([1, 2, null, 3, null, 4]);
+
+    expect(toSchema(schema)).toStrictEqual({
+      type: "array",
+      items: {
+        type: ["integer", "null"],
+      },
+    });
+  });
 });
 
 describe("real world tests", () => {
