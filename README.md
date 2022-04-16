@@ -2,10 +2,10 @@
 
 > Infers JSON Schemas and Type Definitions from example JSON
 
-<!-- ![Coverage lines](./badges/badge-lines.svg) -->
-<!-- ![Tests](https://github.com/jsonhero-io/schema-infer/actions/workflows/test.yml/badge.svg?branch=main) -->
-<!-- [![Downloads](https://img.shields.io/npm/dm/%40jsonhero%2Fschema-infer.svg)](https://npmjs.com/@jsonhero/schema-infer) -->
-<!-- [![Install size](https://packagephobia.com/badge?p=%40jsonhero%2Fschema-infer)](https://packagephobia.com/result?p=@jsonhero/schema-infer) -->
+![Coverage lines](./badges/badge-lines.svg)
+![Tests](https://github.com/jsonhero-io/schema-infer/actions/workflows/test.yml/badge.svg?branch=main)
+[![Downloads](https://img.shields.io/npm/dm/%40jsonhero%2Fschema-infer.svg)](https://npmjs.com/@jsonhero/schema-infer)
+[![Install size](https://packagephobia.com/badge?p=%40jsonhero%2Fschema-infer)](https://packagephobia.com/result?p=@jsonhero/schema-infer)
 
 ## Features
 
