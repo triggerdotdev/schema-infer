@@ -41,7 +41,7 @@ inferSchema({
   emailAddress: "eric@jsonhero.io",
   website: "https://github.com/ericallam",
   joined: "2022-01-01",
-})toJSONSchema();
+}).toJSONSchema();
 ```
 
 Infers the following JSON schema:
