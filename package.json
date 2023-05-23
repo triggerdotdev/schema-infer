@@ -30,7 +30,7 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write && prettier --config .prettierrc 'tests/**/*.ts' --write"
   },
   "engines": {
-    "node": "16"
+    "node": ">=16"
   },
   "keywords": [
     "json",
