@@ -1,4 +1,4 @@
-#!/usr/bin/env/node
+#!/usr/bin/env node
 
 const { readFileSync } = require("fs");
 const yargs = require("yargs");
